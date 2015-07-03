@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elementos>
+	<elemento nombre="legislatura" tipo="Línea"/>
+	<elemento nombre="numero_diario" tipo="Línea"/>
+	<elemento nombre="tipo_sesion" tipo="Lista"/>
+	<elemento nombre="organo" tipo="Lista"/>
+	<elemento nombre="presidente" tipo="Línea"/>
+	<elemento nombre="numero_sesion" tipo="Línea"/>
+	<elemento nombre="dia" tipo="Línea"/>
+	<elemento nombre="mes" tipo="Línea"/>
+	<elemento nombre="anio" tipo="Línea"/>
+	<elemento nombre="tipo_epigrafe" tipo="Lista"/>
+	<elemento nombre="tipo_iniciativa" tipo="Lista"/>
+	<elemento nombre="numero_expediente" tipo="Línea"/>
+	<elemento nombre="extracto" tipo="Texto"/>
+	<elemento nombre="proponentes" tipo="Texto"/>
+	<elemento nombre="tramite" tipo="Línea"/>
+	<elemento nombre="votacion" tipo="Texto"/>
+	<elemento nombre="intervienen" tipo="Texto"/>
+	<elemento nombre="materias" tipo="Texto"/>
+	<elemento nombre="interviniente" tipo="Línea"/>
+	<elemento nombre="parrafo" tipo="Texto"/>
+	<elemento nombre="Aparece_en_orden_del_dia" tipo="Si/No"/>
+</elementos>

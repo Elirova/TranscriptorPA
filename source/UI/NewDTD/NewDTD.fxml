@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="386.0" styleClass="module-background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.NewDTD.NewDTDController">
+    <stylesheets>
+        <URL value="@/UI/UI.css" />
+    </stylesheets>
+   <children>
+      <BorderPane prefHeight="517.0" prefWidth="386.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <HBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" prefWidth="386.0" spacing="30.0" BorderPane.alignment="BOTTOM_CENTER">
+               <children>
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#accept" prefHeight="30.0" prefWidth="90.0" styleClass="button-accept" text="Aceptar" textAlignment="CENTER" />
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#close" prefHeight="30.0" prefWidth="90.0" styleClass="button-default" text="Cancelar" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <VBox prefHeight="535.0" prefWidth="386.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0">
+                     <children>
+                        <Pane layoutX="45.0" layoutY="5.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="80.0" prefWidth="306.0" styleClass="panel-info-left">
+                           <children>
+                              <Label layoutX="57.0" layoutY="14.0" prefHeight="23.0" prefWidth="235.0" text="Archivo DTD" />
+                              <Button layoutX="57.0" layoutY="43.0" mnemonicParsing="false" onAction="#openNewDTD" prefHeight="30.0" prefWidth="100.0" styleClass="button-add" text="Abrir" />
+                              <Label fx:id="dtdOpenName" layoutX="165.0" layoutY="47.0" prefHeight="23.0" prefWidth="133.0" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="90.0" styleClass="circle-default">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="90.0" text="1" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0">
+                     <children>
+                        <Pane layoutY="5.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="80.0" prefWidth="314.0" styleClass="panel-info-right">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="23.0" prefWidth="235.0" text="Escoge un nombre" />
+                              <TextField fx:id="nameText" layoutX="14.0" layoutY="41.0" prefHeight="25.0" prefWidth="230.0" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane2" layoutX="266.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="90.0" styleClass="circle-default">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="90.0" text="2" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0">
+                     <children>
+                        <Pane layoutX="45.0" layoutY="5.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="80.0" prefWidth="306.0" styleClass="panel-info-left">
+                           <children>
+                              <Label layoutX="57.0" layoutY="14.0" prefHeight="23.0" prefWidth="235.0" text="Archivo de configuracion del DTD" />
+                              <Button fx:id="openConfigButton" disable="true" layoutX="57.0" layoutY="43.0" mnemonicParsing="false" onAction="#openNewConfigDTD" prefHeight="30.0" prefWidth="100.0" styleClass="button-add" text="Abrir" />
+                              <Button fx:id="createConfigButton" disable="true" layoutX="175.0" layoutY="43.0" mnemonicParsing="false" onAction="#openCreateNewConfigDTD" prefHeight="30.0" prefWidth="100.0" styleClass="button-add" text="Crear" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="90.0" styleClass="circle-default">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="90.0" text="3" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0">
+                     <children>
+                        <Pane layoutY="5.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="80.0" prefWidth="314.0" styleClass="panel-info-right">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="23.0" prefWidth="235.0" text="Archivo XSLT" />
+                              <Button layoutX="14.0" layoutY="39.0" mnemonicParsing="false" onAction="#openNewXSLT" prefHeight="30.0" prefWidth="100.0" styleClass="button-add" text="Abrir" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane4" layoutX="266.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="90.0" styleClass="circle-default">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="90.0" text="4" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0">
+                     <children>
+                        <Pane layoutX="45.0" layoutY="5.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="80.0" prefWidth="306.0" styleClass="panel-info-left">
+                           <children>
+                              <Label layoutX="57.0" layoutY="14.0" prefHeight="23.0" prefWidth="235.0" text="Archivo CSS" />
+                              <Button layoutX="57.0" layoutY="43.0" mnemonicParsing="false" onAction="#openNewCSS" prefHeight="30.0" prefWidth="100.0" styleClass="button-add" text="Abrir" />
+                              <Label fx:id="dtdOpenName1" layoutX="165.0" layoutY="47.0" prefHeight="23.0" prefWidth="133.0" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="90.0" styleClass="circle-default">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="90.0" text="5" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </center>
+         <padding>
+            <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </BorderPane>
+   </children>
+</AnchorPane>

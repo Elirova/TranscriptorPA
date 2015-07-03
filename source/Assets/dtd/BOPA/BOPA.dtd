@@ -1,0 +1,32 @@
+<!ELEMENT bopa (legislatura, numero_bopa, fecha, desarrollo)>
+
+<!ELEMENT legislatura (#PCDATA)>
+<!ELEMENT numero_bopa (#PCDATA)>
+<!ELEMENT fecha (dia, mes, anio)>
+<!ELEMENT desarrollo (seccion+)>
+
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+
+<!ELEMENT seccion (titulo, subseccion+)>
+<!ELEMENT subseccion (titulo?, (iniciativa | subseccion)+)>
+
+<!ELEMENT titulo (#PCDATA)>
+
+<!ELEMENT iniciativa (numero_expediente?, extracto, materias?, cuadro_tramitacion, discurso?, firma?)> 
+
+<!ELEMENT numero_expediente (#PCDATA)>
+<!ELEMENT extracto (#PCDATA)>
+<!ELEMENT materias (#PCDATA)>
+
+<!ELEMENT cuadro_tramitacion (#PCDATA)>
+<!ELEMENT firma (#PCDATA)>
+
+<!ELEMENT discurso ((parrafo | tabla | imagen)+)> <!-- se llama discurso en vez de texto para que sea el mismo nombre que en el diario de sesiones -->
+
+<!ELEMENT parrafo (#PCDATA)>
+<!ELEMENT tabla (#PCDATA)>
+<!ATTLIST tabla referencia CDATA #REQUIRED>
+<!ELEMENT imagen (#PCDATA)>
+<!ATTLIST imagen referencia CDATA #REQUIRED>

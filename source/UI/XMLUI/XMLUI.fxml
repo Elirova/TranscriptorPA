@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="all" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1023.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.XMLUI.XMLUIController">
+    <stylesheets>
+        <URL value="@/UI/UI.css" />
+    </stylesheets>
+    <children>
+      <BorderPane prefHeight="700.0" prefWidth="1023.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <SplitPane fx:id="splitPane" dividerPositions="0.75" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox alignment="CENTER" disable="true" focusTraversable="true" prefHeight="634.0" prefWidth="805.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView disable="true" fitHeight="150.0" fitWidth="500.0" focusTraversable="true" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/parlamento.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <ScrollPane fx:id="scroll" prefHeight="655.0" prefWidth="799.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="186.0" prefWidth="91.0">
+                     <children>
+                        <BorderPane prefHeight="634.0" prefWidth="198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <TableView fx:id="tableShortcuts" prefHeight="437.0" prefWidth="125.0" BorderPane.alignment="CENTER">
+                                <columns>
+                                  <TableColumn editable="false" prefWidth="75.0" text="Tecla" />
+                                  <TableColumn editable="false" prefWidth="75.0" text="Texto" />
+                                </columns>
+<!--                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>-->
+                              </TableView>
+                           </center>
+                           <bottom>
+                              <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="36.0" prefWidth="200.0" spacing="6.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button maxHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addShortCuts" prefHeight="30.0" styleClass="button-default" text="Añadir atajo..." />
+                                    <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exportShortCuts" prefHeight="30.0" prefWidth="30.0" styleClass="button-default">
+                                       <graphic>
+                                          <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/save.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#importShortcuts" prefHeight="30.0" prefWidth="30.0" styleClass="button-default">
+                                       <graphic>
+                                          <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/import.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </bottom>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+         <top>
+            <HBox prefHeight="50.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="4.0" />
+               </BorderPane.margin>
+               <children>
+                  <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" styleClass="button-menu" text="Archivo">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#newEmptyXML" text="Nuevo..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#setPathSaves" text="Seleccionar ruta de guardado..." />
+                        <MenuItem mnemonicParsing="false" onAction="#showSelectDTD" text="Editar configuracion de proyecto..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#saveXML" text="Exportar XML" />
+                        <MenuItem mnemonicParsing="false" onAction="#savePDF" text="Exportar PDF" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                      <MenuItem mnemonicParsing="false" onAction="#newDTD" text="Crear nuevo proyecto..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#close" text="Salir" />
+                    </items>
+                  </MenuButton>
+                  <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#newEmptyXML" prefHeight="40.0" prefWidth="40.0" styleClass="button-menu" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/new.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#importXML" prefHeight="40.0" prefWidth="40.0" styleClass="button-menu">
+                     <graphic>
+                        <ImageView fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/folder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveXML" prefHeight="40.0" prefWidth="40.0" styleClass="button-menu" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#savePDF" prefHeight="40.0" prefWidth="40.0" styleClass="button-menu">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/savePDF.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </HBox>
+         </top>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </BorderPane>
+      <StackPane fx:id="shortcutsEditPanel" prefHeight="700.0" prefWidth="1023.0" style="-fx-background-color: #0005;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <StackPane fx:id="DTDWindowPanel" focusTraversable="true" prefHeight="700.0" prefWidth="1023.0" style="-fx-background-color: #0005;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <StackPane fx:id="selectDTDWindowPanel" prefHeight="700.0" prefWidth="1023.0" style="-fx-background-color: #0005;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <StackPane fx:id="newDTDPanel" prefHeight="700.0" prefWidth="1023.0" style="-fx-background-color: #0005;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <StackPane fx:id="errorDTDFromXMLPanel" prefHeight="700.0" prefWidth="1023.0" style="-fx-background-color: #0005;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <StackPane fx:id="errorMessagePanel" prefHeight="700.0" prefWidth="1023.0" style="-fx-background-color: #0005;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <StackPane fx:id="newXMLPanel" prefHeight="700.0" prefWidth="1023.0" style="-fx-background-color: #0005;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

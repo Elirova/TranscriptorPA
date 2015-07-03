@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="231.0" prefWidth="560.0" styleClass="module-background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.ErrorReadDTDFromXML.ErrorDTDFromXMLController">
+    <stylesheets>
+        <URL value="@/UI/UI.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" prefHeight="311.0" prefWidth="559.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="93.0" prefWidth="558.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" styleClass="no-valid-label" text="No se ha encontrado el DTD asociado" textAlignment="CENTER" />
+                  <Label alignment="CENTER" styleClass="no-valid-label" text="Por favor, escoja una opcion" textAlignment="CENTER" />
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+            <GridPane alignment="CENTER" hgap="20.0" prefHeight="158.0" prefWidth="559.0" vgap="20.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <Button alignment="BASELINE_LEFT" defaultButton="true" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#selectDTD" prefHeight="50.0" prefWidth="251.0" styleClass="button-accept" text="Seleccionar DTD existente">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/folder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#newDTD" prefHeight="50.0" prefWidth="251.0" styleClass="button-default" text="Nuevo DTD" GridPane.columnIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/new.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#loadWithoutDTD" prefHeight="50.0" prefWidth="251.0" styleClass="button-default" text="Cargar sin DTD" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/import.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" cancelButton="true" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#close" prefHeight="50.0" prefWidth="251.0" styleClass="button-default" text="Cancelar" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/x.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

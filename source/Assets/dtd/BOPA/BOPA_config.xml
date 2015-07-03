@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elementos>
+	<elemento nombre="anio" tipo="Línea"/>
+	<elemento nombre="extracto" tipo="Texto"/>
+	<elemento nombre="numero_bopa" tipo="Línea"/>
+	<elemento nombre="cuadro_tramitacion" tipo="Texto"/>
+	<elemento nombre="materias" tipo="Texto"/>
+	<elemento nombre="dia" tipo="Línea"/>
+	<elemento nombre="tabla" tipo="Línea"/>
+	<elemento nombre="legislatura" tipo="Línea"/>
+	<elemento nombre="imagen" tipo="Línea"/>
+	<elemento nombre="titulo" tipo="Línea"/>
+	<elemento nombre="mes" tipo="Línea"/>
+	<elemento nombre="parrafo" tipo="Texto"/>
+	<elemento nombre="firma" tipo="Texto"/>
+	<elemento nombre="numero_expediente" tipo="Línea"/>
+	<elemento nombre="referencia" tipo="Selector_de_fichero"/>
+</elementos>

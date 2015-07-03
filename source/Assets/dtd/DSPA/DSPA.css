@@ -1,0 +1,150 @@
+@media all {
+    .page-break { display: none; }
+}
+ 
+@media print {
+    .page-break { display: block; page-break-before: always; }
+}
+@page {
+	margin : 100px 80px 100px 80px;
+	@top-center { content: element(header) }
+	@bottom-center { content: element(footer) }
+}
+
+@page:first {      
+	@top-center { content: element() }
+}
+div.header {
+	display: block; 
+	vertical-align: bottom;
+        position: running(header);
+}
+div.footer {
+        display: block;
+	text-align: center;
+	vertical-align: top;
+        position: running(footer);
+}
+span.page:before { content: counter(page); }
+span.pagecount:before { content: counter(pages); }
+
+body {
+	-epub-hyphens:auto;
+	font-family: sans-serif;
+	font-size: 13px;
+	color:#000;
+}
+
+.line {
+	width: 40%;
+	border-bottom: 1px solid #222;
+	margin: 0 auto;
+}
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.columns3 {
+	width: 33%;
+}
+
+.footer {
+	color:#004c99;
+	border-top: 1px solid #004c99;
+	font-size: 12px;
+}
+
+.banner {
+	margin-bottom: 70px;
+}
+
+.info {
+	color:#004c99;
+	border-top: 1px solid #004c99;
+	border-bottom: 1px solid #004c99;
+	width: 100%;
+	font-family: sans-serif;
+	font-size: 13px;
+	line-height:1;
+}
+
+.organo {
+	color:#004c99;
+	text-transform:uppercase;
+	text-align:center;
+	font-size:20px;
+	line-height:1;
+}
+
+.presidencia {
+	font-size:1em;
+	font-weight:bold;
+	line-height:1.6;
+	margin-bottom:30px;
+	margin-top: 20px;
+	text-align:center;
+}
+
+.numero_sesion {
+	font-size:12px;
+	line-height:0.5;
+	text-align:center;
+}
+
+.fecha {
+	font-size:12px;
+	line-height:0.5;
+	text-align:center;
+	margin-bottom: 20px;
+}
+
+.sumario {
+	font-size:1.167em;
+	margin-bottom:50px;
+	margin-top:30px;
+	text-align:center;
+	text-transform:uppercase;
+}
+
+.tipo_iniciativa {
+	color:#004c99;
+	text-transform:uppercase;
+}
+
+.extracto {
+	margin-left: 20px;
+}
+
+.intervienen {
+	margin-left: 40px;
+}
+
+.votacion {
+	margin-left: 40px;
+	font-style:italic;
+}
+
+.extracto_extendido {
+	font-weight:bold;
+	color:#004c99;
+	margin-bottom:30px;
+}
+
+.interviniente {
+	color:#004c99;
+	margin-top:30px;
+}
+
+.parrafo {
+	line-height:1.2;
+	text-indent: 30px;
+}

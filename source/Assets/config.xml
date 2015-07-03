@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config>
+	<dtd>BOPA</dtd>
+	<version></version>
+	<elementos>
+		<elemento nombre="parrafo" tipo="Texto"/>
+		<elemento nombre="dia" tipo="Línea"/>
+		<elemento nombre="mes" tipo="Línea"/>
+		<elemento nombre="año" tipo="Línea"/>
+		<elemento nombre="anio" tipo="Línea"/>
+		<elemento nombre="titulo" tipo="Línea"/>
+		<elemento nombre="imagen" tipo="Línea"/>
+		<elemento nombre="tabla" tipo="Línea"/>
+		<elemento nombre="tipo_sesion" tipo="Lista"/>
+		<elemento nombre="tipo_epigrafe" tipo="Lista"/>
+		<elemento nombre="tipo_iniciativa" tipo="Lista"/>
+		<elemento nombre="organo" tipo="Lista"/>
+	</elementos>
+	<listas>
+		<lista nombre="organo">
+			<objeto nombre="Comisión Consultiva de Nombramientos, Relaciones con el Defensor del Pueblo Andaluz y Peticiones"/>
+			<objeto nombre="Comisión de Administración Local y Relaciones Institucionales"/>
+			<objeto nombre="Comisión de Agricultura, Pesca y Desarrollo Rural"/>
+			<objeto nombre="Comisión de Economía, Innovación, Ciencia y Empleo"/>
+			<objeto nombre="Comisión de Fomento y Vivienda"/>
+			<objeto nombre="Diputación Permanente"/>
+			<objeto nombre="Pleno"/>
+		</lista>
+		<lista nombre="tipo_epigrafe">
+			<objeto nombre="Agencia Pública Empresarial de la RTVA"/>
+			<objeto nombre="Ayuntamientos"/>
+			<objeto nombre="Cámara de Cuentas de Andalucía"/>
+			<objeto nombre="Comisiones, Grupos de trabajo, Ponencias de estudio y Diputados interventores"/>
+			<objeto nombre="Comparecencias"/>
+			<objeto nombre="Comparecencias informativas"/>
+			<objeto nombre="Convocatorias"/>
+			<objeto nombre="Declaraciones institucionales"/>
+			<objeto nombre="Defensor del Pueblo Andaluz"/>
+			<objeto nombre="DIPUTACIÓN PERMANENTE"/>
+			<objeto nombre="DIPUTADOS"/>
+			<objeto nombre="Discurso Institucional"/>
+			<objeto nombre="Iniciativas fiscalizadoras"/>
+			<objeto nombre="Interpelaciones"/>
+			<objeto nombre="Investidura a la Presidencia de la Junta de Andalucía"/>
+			<objeto nombre="Mociones"/>
+			<objeto nombre="PREGUNTAS ESCRITAS CON TRATAMIENTO DE PREGUNTA ORAL EN COMISIÓN"/>
+			<objeto nombre="Preguntas orales"/>
+			<objeto nombre="Proposiciones de ley"/>
+			<objeto nombre="Proposiciones no de ley"/>
+			<objeto nombre="Proyectos de ley"/>
+			<objeto nombre="Punto nuevo del orden del día"/>
+			<objeto nombre="Relación con órganos e instituciones públicas"/>
+			<objeto nombre="TRIBUNAL SUPERIOR DE JUSTICIA DE ANDALUCÍA"/>
+			<objeto nombre="Tribunal Superior de Justicia de Andalucía, Ceuta y Melilla"/>
+		</lista>
+		<lista nombre="tipo_iniciativa">
+			<objeto nombre="Agencia Pública Empresarial de la RTVA"/>
+			<objeto nombre="Ayuntamientos"/>
+			<objeto nombre="Cámara de Cuentas de Andalucía"/>
+			<objeto nombre="Comisiones, Grupos de trabajo, Ponencias de estudio y Diputados interventores"/>
+			<objeto nombre="Comparecencias"/>
+			<objeto nombre="Comparecencias informativas"/>
+			<objeto nombre="Convocatorias"/>
+			<objeto nombre="Declaraciones institucionales"/>
+			<objeto nombre="Defensor del Pueblo Andaluz"/>
+			<objeto nombre="DIPUTACIÓN PERMANENTE"/>
+			<objeto nombre="DIPUTADOS"/>
+			<objeto nombre="Discurso Institucional"/>
+			<objeto nombre="Iniciativas fiscalizadoras"/>
+			<objeto nombre="Interpelaciones"/>
+			<objeto nombre="Investidura a la Presidencia de la Junta de Andalucía"/>
+			<objeto nombre="Mociones"/>
+			<objeto nombre="PREGUNTAS ESCRITAS CON TRATAMIENTO DE PREGUNTA ORAL EN COMISIÓN"/>
+			<objeto nombre="Preguntas orales"/>
+			<objeto nombre="Proposiciones de ley"/>
+			<objeto nombre="Proposiciones no de ley"/>
+			<objeto nombre="Proyectos de ley"/>
+			<objeto nombre="Punto nuevo del orden del día"/>
+			<objeto nombre="Relación con órganos e instituciones públicas"/>
+			<objeto nombre="TRIBUNAL SUPERIOR DE JUSTICIA DE ANDALUCÍA"/>
+			<objeto nombre="Tribunal Superior de Justicia de Andalucía, Ceuta y Melilla"/>
+		</lista>
+		<lista nombre="tipo_sesion">
+			<objeto nombre="Sesión celebrada"/>
+			<objeto nombre="Sesión constitutiva"/>
+			<objeto nombre="Sesión plenaria"/>
+		</lista>
+	</listas>
+</config>

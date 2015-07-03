@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT diario_sesion_pa (legislatura, numero_diario, tipo_sesion?, organo, presidente, numero_sesion?, fecha, desarrollo)>
+
+<!ELEMENT legislatura (#PCDATA)> <!-- I, II, III, IV, V, VI, VII, VIII,... -->
+<!ELEMENT numero_diario (#PCDATA)> <!-- como una misma sesion puede durar varios dias, y cada dia genera un diario... -->
+<!ELEMENT tipo_sesion (#PCDATA)> <!-- ordinaria, extraordinaria, constitutiva, institucional -->
+<!ELEMENT organo (#PCDATA)> <!-- pleno, comision de XXXX, diputacion permanente -->
+<!ELEMENT presidente (#PCDATA)>
+<!ELEMENT numero_sesion (#PCDATA)>
+<!ELEMENT fecha (dia, mes, anio)>
+<!ELEMENT desarrollo ((epigrafe | iniciativa)+)> <!-- epigrafe es un artificio para agrupar todas las iniciativas del mismo tipo -->
+
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+
+<!ELEMENT epigrafe (tipo_epigrafe, iniciativa+)> <!-- tipo_epigrafe es lo mismo que tipo_iniciativa -->
+
+<!ELEMENT tipo_epigrafe (#PCDATA)>
+<!ELEMENT iniciativa (tipo_iniciativa, numero_expediente?, extracto?, proponentes?, debate_agrupado?, tramite?, votacion*, intervienen?, materias?, intervencion+)>
+
+<!ELEMENT tipo_iniciativa (#PCDATA)>  <!-- pregunta oral, proposicion no de ley... -->
+<!ELEMENT numero_expediente (#PCDATA)> <!-- si se trata de un debate agrupado, aparecera el numero de expediente de todas las iniciativas que han sido agrupadas -->
+<!ELEMENT extracto (#PCDATA)> <!-- si se trata de un debate agrupado, aparecera el extracto de todas las iniciativas que han sido agrupadas. Aparecen en el orden del dia -->
+<!ELEMENT proponentes (#PCDATA)> <!-- Este dato aparece en el orden del dia; ojo con a peticion propia en las comparecencias; presentada por, formulada por, solicitada por, a propuesta de -->
+<!ELEMENT debate_agrupado ((componente)+)> <!-- Si es un debate agrupado, el numero de expediente contiene la lista de los numeros de expedientes componentes, el extracto contiene el extracto resumen que aparece en el desarrollo, y proponentes esta vacio. Cada componente tiene su propio numero de expediente, su extracto y sus proponentes -->
+<!ELEMENT componente (numero_expediente, extracto?, proponentes?)>
+<!ELEMENT tramite (#PCDATA)> <!-- motivo por el que esta incluida, etapa por la que va de su tramitacion -->
+<!ELEMENT votacion (#PCDATA)> <!-- este dato aparece en el sumario, solo a veces, otras dice consultar texto -->
+<!ELEMENT intervienen (#PCDATA)> <!-- este dato aparece en el sumario -->
+<!ELEMENT materias (#PCDATA)>
+<!ELEMENT intervencion (interviniente,discurso)>
+
+<!ELEMENT interviniente (#PCDATA)> <!-- tratar de relacionar con la lista de intervinientes del sumario, donde aparecen nombres completos y cargos -->
+<!ELEMENT discurso (parrafo+)>
+
+<!ELEMENT parrafo (#PCDATA)>
+
+<!ATTLIST iniciativa Aparece_en_orden_del_dia CDATA #REQUIRED>

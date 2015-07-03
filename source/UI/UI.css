@@ -1,0 +1,275 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-feb-2015, 14:11:09
+    Author     : xelun
+*/
+
+.background {
+    	-fx-background-color: #747c85;
+}
+
+.module-background {
+	-fx-background-color: #eee;
+	-fx-border-width: 1;
+	-fx-border-color: #aaa;
+	-fx-border-style: solid;
+	-fx-border-radius: 10;
+	-fx-background-radius: 10;
+	-fx-effect: dropshadow( three-pass-box , #0008 , 15, 0 , 0 , 3 );
+}
+
+.gradient-separator {
+	-fx-background-color: radial-gradient(focus-distance 0% , 
+		center 50% 50% , radius 55% , #228cc3, transparent);
+	-fx-effect: dropshadow( three-pass-box , #000, 10, 0 , 0 , 3 );
+}
+
+.module-title {
+	-fx-font-size: 18px;
+    	-fx-font-weight: bold;
+    	-fx-text-fill: #222;
+	-fx-effect: dropshadow( three-pass-box , #fff , 5, 0 , 0 , 1 );
+}
+
+.textArea {
+	-fx-border-width: 1;
+	-fx-border-color: #569cb6;
+	-fx-border-style: solid;
+	-fx-border-radius: 3;
+	-fx-background-radius: 3;
+}
+
+.textArea:focused {
+	-fx-effect: innershadow( three-pass-box , #A9BCF5bb, 30, 0 , 0 , 0 );
+}
+
+.listSpinner {
+	-fx-border-width: 1;
+	-fx-border-color: #96d4eb;
+	-fx-border-style: solid;
+	-fx-border-radius: 3;
+	-fx-background-radius: 3;
+	-fx-effect: dropshadow( three-pass-box , #0003, 3, 0 , 0 , 0 );
+}
+
+.listSpinner:focused .listSpinner:default:hover:focused {
+	-fx-effect: dropshadow( three-pass-box , #c1c100bb, 5, 0 , 0 , 0 );
+}
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+.background-xml {
+	-fx-border-width: 1;
+	-fx-border-color: #46869e;
+	-fx-border-style: solid;
+	-fx-border-radius: 6;
+	-fx-background-radius: 6;
+	-fx-background-color: #6ac0e011;
+	-fx-padding: 5;
+}
+
+.background-attribute-xml {
+	-fx-border-width: 1;
+	-fx-border-color: #704F9F;
+	-fx-border-style: solid;
+	-fx-border-radius: 6;
+	-fx-background-radius: 6;
+	-fx-background-color: #9C76D122;
+	-fx-padding: 5;
+}
+
+.name-xml {
+	-fx-font-weight: bold;
+    	-fx-text-fill: #222;
+	-fx-effect: dropshadow( three-pass-box , #FFF8 , 2, 0 , 0 , 1 );
+	-fx-padding: 10 0 0 10;
+}
+
+.button-accept {
+	-fx-border-width: 1;
+	-fx-border-color: #569cb6;
+	-fx-border-style: solid;
+	-fx-border-radius: 6;
+	-fx-background-radius: 6;
+	-fx-background-color: linear-gradient(#6ac0e0 0%, #6ac0e0 60%, #569cb6 100%);
+    	-fx-font-weight: bold;
+    	-fx-text-fill: #222;
+	-fx-padding: 5px;
+}
+
+.button-accept:pressed {
+	-fx-background-color: linear-gradient(#569cb6 0%, #6ac0e0 40%, #6ac0e0 100%);
+}
+
+.button-default {
+	-fx-border-width: 1;
+	-fx-border-color: #6ac0e0;
+	-fx-border-style: solid;
+	-fx-border-radius: 6;
+	-fx-background-radius: 6;
+	-fx-background-color: linear-gradient(#96d4eb 0%, #96d4eb 60%, #6ac0e0 100%);
+    	-fx-text-fill: #222;
+	-fx-padding: 5;
+}
+
+.button-default:pressed, .button-default:default:hover:pressed {
+	-fx-background-color: linear-gradient(#6ac0e0 0%, #96d4eb 40%, #96d4eb 100%);
+}
+
+.button-default:hover {
+	-fx-background-color: linear-gradient(#addaeb 0%, #addaeb 60%, #96d4eb 100%);
+}
+
+.button-add {
+	-fx-border-width: 1;
+	-fx-border-color: #569cb6;
+	-fx-border-style: solid;
+	-fx-border-radius: 6;
+	-fx-background-radius: 6;
+	-fx-background-color: linear-gradient(#569cb6 0%, #569cb6 60%, #46869e 100%);
+    	-fx-text-fill: #FFF;
+	-fx-padding: 5px;
+}
+
+.button-add:pressed {
+	-fx-background-color: linear-gradient(#46869e 0%, #569cb6 40%, #569cb6 100%);
+}
+
+.button-menu {
+	-fx-border-width: 0;
+	-fx-background-radius: 6;
+	-fx-background-color: transparent;
+}
+
+.button-menu:hover {
+	-fx-border-width: 0;
+	-fx-background-radius: 6;
+	-fx-background-color: #fff3;
+}
+
+.switch {
+	-fx-border-width: 1;
+	-fx-border-color: #6ac0e0;
+	-fx-border-style: solid;
+	-fx-border-radius: 30;
+	-fx-background-radius: 30;
+	-fx-padding: 0 5 0 5;
+}
+
+.switch .button {
+	-fx-border-width: 1;
+	-fx-border-color: #6ac0e0;
+	-fx-border-style: solid;
+	-fx-border-radius: 30;
+	-fx-background-radius: 30;
+}
+
+
+.table-view {
+    -fx-table-cell-border-color: #569cb6;	
+}
+
+.table-row-cell:odd {
+    	-fx-background-color: #ddeaf1;
+	-fx-border-width: 0 1 0 1;
+}
+
+.table-row-cell {
+    	-fx-background-color: #fff;
+	-fx-border-width: 0 1 0 1;
+}
+
+.table-view .column-header {
+    	-fx-background-color: #569cb6;
+    	-fx-text-fill: #fff;
+	-fx-border-width: 0 0 1 0;
+	-fx-border-color: #000;
+}
+
+.table-view .column-header .label {
+    	-fx-font-family: "Segoe UI Light";
+    	-fx-text-fill: white;
+	-fx-font-weight: bold;
+	-fx-font-size: 14px;
+}
+ 
+.table-row {
+    	-fx-border-width: 0 1 0 1;
+}
+
+.table-row-cell:selected {
+    	-fx-background-color: #96d4eb;
+}
+
+.tree-view {
+	-fx-font-weight: bold;
+}
+
+.tree-view:focused .tree-cell:focused {
+    -fx-background-color: #96d4eb;
+}
+
+.no-valid-label {
+    	-fx-font-weight: bold;
+    	-fx-text-fill: #8f0000;
+	-fx-effect: dropshadow( three-pass-box , #FFF8 , 2, 0 , 0 , 1 );
+}
+
+.circle-correct {
+	-fx-background-radius: 50px;
+	-fx-border-radius: 50px;
+	-fx-border-width: 8;
+	-fx-font-size: 35px;
+	-fx-border-color: #4f6729;
+	-fx-background-color: #96c34e;
+}
+
+.circle-incorrect {
+	-fx-background-radius: 50px;
+	-fx-border-radius: 50px;
+	-fx-border-width: 8;
+	-fx-font-size: 35px;
+	-fx-border-color: #980707;
+	-fx-background-color: #d96e6e;
+}
+
+.circle-default {
+	-fx-background-radius: 50px;
+	-fx-border-radius: 50px;
+	-fx-border-width: 8;
+	-fx-font-size: 35px;
+	-fx-border-color: #569cb6;
+	-fx-background-color: #98e0fb;
+}
+
+.panel-info-left {
+	-fx-background-color: #99CCFF66;
+	-fx-background-radius: 0 20 20 0;
+}
+
+.panel-info-right {
+	-fx-background-color: #99CCFF66;
+	-fx-background-radius: 20 0 0 20;
+}
+
+.transparent {
+    	-fx-background-color: #0000;
+}
+
+.grid {
+	-fx-background-color: lightsteelblue;
+	-fx-padding: 10;
+	-fx-border-insets: 10;
+	-fx-border-radius: 6;
+	-fx-border-color: #456;
+}
+
+.atajos {
+    	-fx-background-color: #863;
+}
