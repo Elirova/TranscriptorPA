@@ -20,5 +20,5 @@
 	<elemento nombre="materias" tipo="Texto"/>
 	<elemento nombre="interviniente" tipo="Línea"/>
 	<elemento nombre="parrafo" tipo="Texto"/>
-	<elemento nombre="Aparece_en_orden_del_dia" tipo="Si/No"/>
+	<elemento nombre="Se_va_a_extender" tipo="Si/No"/>
 </elementos>

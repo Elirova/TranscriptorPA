@@ -58,7 +58,7 @@ public abstract class Config {
     public static String pathBaseDTDConfig   = "";
     public static String nameDTD             = "";
     
-    public static final String version       = "v1.0.0";
+    public static final String version       = "v1.1.0";
     
     /**
      * Lee la configuración de inicio del programa.

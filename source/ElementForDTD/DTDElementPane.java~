@@ -1,0 +1,40 @@
+package ElementForDTD;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+
+/**
+ * Elemento de interfaz que contiene el nombre del elemento DTd asociado y un
+ * componente para modificar su configuración.
+ */
+public class DTDElementPane extends HBox {
+    private static final ObservableList<String> info = FXCollections.observableArrayList("Texto", "Línea", "Tabla", "Imagen");
+    private ComboBox listType;
+    
+    public DTDElementPane(String name, String type, boolean exist){
+        if(exist){
+            Label defined = new Label("(Ya definido)");
+            defined.setMinWidth(120);
+            getChildren().addAll(defined, new Label(name));
+        } else {
+            listType = new ComboBox(info);
+            
+            if(type.equals("Tabla") || type.equals("Línea") || type.equals("Imagen")) listType.setValue(type);
+            else listType.setValue("Texto");
+
+            listType.setMinWidth(120);
+            getChildren().addAll(listType, new Label(name));
+        }
+        setSpacing(30);
+    }
+    
+    /**
+     * @return El tipo de configuración.
+     */
+    public String getType() {
+        return (listType != null)? listType.getValue().toString() : "Texto";
+    }
+}

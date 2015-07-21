@@ -61,7 +61,7 @@
 		<xsl:sort select="tipo_iniciativa" />
 		<p class="tipo_iniciativa"><xsl:value-of select="tipo_iniciativa" /></p>
 		<xsl:for-each select="key('iniciativa_por_tipo', tipo_iniciativa)">
-			<xsl:if test="@Aparece_en_orden_del_dia='Si'">
+			<xsl:if test="@Se_va_a_extender='Si'">
 				<p class="extracto">
 					<xsl:if test="numero_expediente"><xsl:value-of select="numero_expediente"/>. </xsl:if>
 					<xsl:value-of select="extracto" />
@@ -97,43 +97,22 @@
 <!-- TEMPLATE PARA LAS INICIATIVAS EXTENDIDAS -->
 <xsl:template match="desarrollo" mode="total">
 	<xsl:for-each select=".//iniciativa">
-		<p class="extracto_extendido">
-			<xsl:if test="numero_expediente"><xsl:value-of select="numero_expediente"/>. </xsl:if>
-			<xsl:value-of select="extracto" /> 
-		</p>
+		<xsl:if test="@Se_va_a_extender='Si'">
+			<p class="extracto_extendido">
+				<xsl:if test="numero_expediente"><xsl:value-of select="numero_expediente"/>. </xsl:if>
+				<xsl:value-of select="extracto" /> 
+			</p>
 
-		<xsl:for-each select="intervencion">
-			<p class="interviniente"><xsl:value-of select="interviniente"/></p>
-			<xsl:for-each select="discurso/parrafo">
-				<p class="parrafo"><xsl:value-of select="."/></p>
+			<xsl:for-each select="intervencion">
+					<p class="interviniente"><xsl:value-of select="interviniente"/></p>
+					<xsl:for-each select="discurso/parrafo">
+						<p class="parrafo"><xsl:value-of select="."/></p>
+					</xsl:for-each>
 			</xsl:for-each>
-		</xsl:for-each>
 
-		<div class="line"/>	
-		<div class="page-break"></div>
-	</xsl:for-each>
-</xsl:template>
-
-<xsl:template match="desarrollo" mode="antiguo">
-	<xsl:for-each select=".//iniciativa">
-		<p class="sumtitulo1 titulo-seccion"><xsl:value-of select="../../titulo"/></p>
-		<p class="Contestaciones_sumtitulo3 ParaOverride-3"><xsl:value-of select="../titulo"/></p>
-		<p class="extracto"><xsl:if test="numero_expediente"><span class="numero_expediente"><xsl:value-of select="numero_expediente"/><span>, </span></span></xsl:if>
-		<xsl:value-of select="extracto"/></p>
-		<div class="cuadro_tramitacion">
-		<xsl:call-template name="br">
-	    		<xsl:with-param name="text" select="cuadro_tramitacion"/>
-		</xsl:call-template>
-		</div>
-		<xsl:for-each select="discurso/parrafo">
-			<p class="discurso_parrafo"><xsl:value-of select="."/></p>
-		</xsl:for-each>
-		<div class="firma">
-		<xsl:call-template name="br">
-	    		<xsl:with-param name="text" select="firma"/>
-		</xsl:call-template>
-		</div>
-		<div class="page-break"></div>
+			<div class="line"/>	
+			<div class="page-break"></div>
+		</xsl:if>
 	</xsl:for-each>
 </xsl:template>
 

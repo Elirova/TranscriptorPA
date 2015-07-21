@@ -36,4 +36,4 @@
 
 <!ELEMENT parrafo (#PCDATA)>
 
-<!ATTLIST iniciativa Aparece_en_orden_del_dia CDATA #REQUIRED>
+<!ATTLIST iniciativa Se_va_a_extender CDATA #REQUIRED>
